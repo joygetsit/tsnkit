@@ -18,21 +18,16 @@ Documentation (work-in-progress): https://tsnkit.readthedocs.io
 
 ## Install
 
+Install poetry for managing this project in its own venv
+curl -sSL https://install.python-poetry.org | python3 -
+
 Install from source (recommended):
 
 ```
 git clone https://github.com/ChuanyuXue/tsnkit
 cd tsnkit
-python setup.py install
+poetry install
 ```
-
-
-From pip:
-
-```
-pip install -U tsnkit
-```
-
 
 
 ## Usage
