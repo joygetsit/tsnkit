@@ -2,11 +2,16 @@
 name = "tsnkit"
 version = "0.2.3"
 authors = [
-  { name="Chuanyu Xue", email="skewcy@gmail.com" },
+  "Chuanyu Xue <skewcy@gmail.com>",
 ]
 description = "A simple scheduling toolkit for time-sensitive network in Python."
 readme = "README.md"
-requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    'Development Status :: 3 - Alpha ',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: MIT License',
+]
 
 [tool.poetry.dependencies]
 python = ">=3.9"
@@ -18,17 +23,12 @@ numpy = ">=1.21.4"
 pandas = ">=1.4.1"
 psutil = ">=5.9.4"
 scikit_learn = ">=1.3.0"
+tqdm = "==4.66.5"
+seaborn = "==0.13.2"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-classifiers = [
-    "Programming Language :: Python :: 3",
-    'Development Status :: 3 - Alpha ',
-    'Intended Audience :: Science/Research',
-    'License :: OSI Approved :: MIT License',     
-]
 
 [project.urls]
 "Homepage" = "https://github.com/ChuanyuXue/tsnkit"
