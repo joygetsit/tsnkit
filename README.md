@@ -18,24 +18,27 @@ Documentation (work-in-progress): https://tsnkit.readthedocs.io
 
 ## Install
 
+Install poetry for managing this project in its own venv
+`curl -sSL https://install.python-poetry.org | python3 -`
+
 Install from source (recommended):
 
 ```
 git clone https://github.com/ChuanyuXue/tsnkit
 cd tsnkit
-python setup.py install
+poetry install
 ```
-
-
-From pip:
-
-```
-pip install -U tsnkit
-```
-
 
 
 ## Usage
+
+**Create and/or enter virtual environment**
+```
+python shell
+
+# To leave the virtual environment
+exit
+```
 
 **Testing:**
 
@@ -56,7 +59,6 @@ python3 -m tsnkit.models.[METHOD] [STREAM PATH] [NETWORK PATH]
 - **`src/tsnkit/models`**: Inplementations of all supported scheduling methods.
 - **`src/tsnkit/simulation`**: TSN simulator to validate the scheduling output.
 - **`src/tsnkit/utils`**: Data structures and helper functions.
-
 
 ## Contribute
 

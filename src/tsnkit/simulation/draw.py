@@ -1,4 +1,5 @@
 import seaborn as sns
+import pandas as pd
 import matplotlib.pyplot as plt
 from typing import List, Tuple
 
@@ -42,12 +43,22 @@ def draw(log: List[List[List[int]]]) -> None:
     plt.figure(figsize=(12, 4))
 
     ## Draw delays
+    # Flatten the list and create a DataFrame
+    values = [item[0] for item in flow_delays]
+    df = pd.DataFrame({'Index': range(len(values)), 'Value': values})
+
     plt.subplot(1, 2, 1)
-    for i in range(len(flow_delays)):
-        sns.lineplot(x=range(len(flow_delays[i])), y=flow_delays[i], label=f"flow{i}")
+    # Plot horizontal lines
+    for i, value in enumerate(values):
+        sns.lineplot(x=[0, len(values) - 1], y=[value, value], label=f'flow{i}')
+    # for i in range(len(flow_delays)):
+    #     sns.lineplot(x=range(len(flow_delays[i])), y=flow_delays[i][0], label=f"flow{i}")
+    # Set x-axis labels
+    plt.xticks(range(len(values)), [f'{i}' for i in range(len(values))])
     plt.title("Simulated delay")
     plt.xlabel("Pkt index")
     plt.ylabel("Delay (ns)")
+    plt.legend()
 
     ## Draw jitters
     plt.subplot(1, 2, 2)
