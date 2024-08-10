@@ -34,7 +34,7 @@ poetry install
 
 **Create and/or enter virtual environment**
 ```
-python shell
+poetry shell
 
 # To leave the virtual environment
 exit
